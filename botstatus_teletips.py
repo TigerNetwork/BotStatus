@@ -1,9 +1,3 @@
-#Copyright ©️ 2021 TeLe TiPs. All Rights Reserved
-#You are free to use this code in any of your project, but you MUST include the following in your README.md (Copy & paste)
-# ##Credits - [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
-
-# Changing the code is not allowed! Read GNU AFFERO GENERAL PUBLIC LICENSE: https://github.com/teletips/Powerful_BotStatus-TeLeTiPs/blob/main/LICENSE
-
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import asyncio
@@ -12,16 +6,16 @@ import pytz
 import os
 
 app = Client(
-    name = "botstatus_teletips",
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
-    session_string = os.environ["SESSION_STRING"]
+    name = "RichStatus",
+    api_id = "11469239",
+    api_hash = "a7a24e71e12f5540d66c7f27ee0b992d",
+    session_string = "BQDGUQEy208KujNyBexfvsy-FDEUyJDWQiagZlRnvh6MhFmrR1B_FuYVR1wCLie4-Njith3bswgEner2aqPuihV1u6523bdzjSeWkBC30XRQKnk4aC49h32cZYsEiMMC7a2Dz7mE8aQyyOXunmQdm7SrIj-jTqWsyyL1nwjkGS4NLgO14O3W69RfqpvukiAXf_VRDoBT4wGN-ImWRhaHL30nNcjplAnJmY8vJHmbGN9XDJ-c_gZ7xs0r1dkvg6B9simjMDUIfp_ODKDZc8xXu-aTvK4St6gUG68p66437qnfeFyZTsuGgDVI6kScrzyPuXD_F0OHyfYY3jSYvt10x-7uAAAAAUrLlYkA"
 )
-TIME_ZONE = os.environ["TIME_ZONE"]
-BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST").split(' ')]
-CHANNEL_OR_GROUP_ID = int(os.environ["CHANNEL_OR_GROUP_ID"])
-MESSAGE_ID = int(os.environ["MESSAGE_ID"])
-BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
+TIME_ZONE = "Asia/Kolkata"
+BOT_LIST = [i.strip() for i in "MissRichBot".split(' ')]
+CHANNEL_OR_GROUP_ID = "-1001512351197"
+MESSAGE_ID = "20"
+BOT_ADMIN_IDS = [int(i.strip()) for i in "5215836363 5549823369".split(' ')]
 
 async def main_teletips():
     async with app:
@@ -54,7 +48,7 @@ async def main_teletips():
                 xxx_teletips += f"\n\n✔️ Lᴀsᴛ ᴄʜᴇᴄᴋᴇᴅ ᴏɴ: {last_update} ({TIME_ZONE})\n\n<i>♻️ Rᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ</i>"
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
-                await asyncio.sleep(6300)
+                await asyncio.sleep(1800)
                         
 app.run(main_teletips())
 
